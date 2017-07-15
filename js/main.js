@@ -105,18 +105,18 @@
         });
 
 //==============___Blog - Ajax___================
-        function loadPost() {
-            $.ajax({
-                url: 'single.html', // URL HERE
-                type: 'GET',
-                success: function (html) {
-
-                    var $lis = $(html).find('#blogPost'); // Loads the content inside #blogPost div
-
-                    $("#postHere").html($lis);
-                }
-            });
-        }
+//         function loadPost() {
+//             $.ajax({
+//                 url: 'single.html', // URL HERE
+//                 type: 'GET',
+//                 success: function (html) {
+//
+//                     var $lis = $(html).find('#blogPost'); // Loads the content inside #blogPost div
+//
+//                     $("#postHere").html($lis);
+//                 }
+//             });
+//         }
 
         $(".loadPost").on('click', function (event) {
             event.preventDefault();
