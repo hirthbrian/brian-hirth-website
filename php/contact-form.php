@@ -26,10 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_content .= "Message:\n$message\n";
 
     // Build the email headers.
-    $email_headers = "From: $name <$email>";
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+    $headers .= 'From: $name <$email>' . "\r\n";
 
     // Send the email.
-    if (mail($recipient, $subject, $email_content, $email_headers)) {
+    if (mail($recipient, $subject, $email_content, $headers)) {
         // Set a 200 (okay) response code.
         http_response_code(200);
         echo "Thank You! Your message has been sent.";
