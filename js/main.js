@@ -138,27 +138,24 @@
                         "email": $("#contactForm #email").val(),
                         "subject": $("#contactForm #subject").val(),
                         "message": $("#contactForm #message").val()
-                    },
-                    dataType: "json",
-                    success: function (data) {
-                        if (data.response == "success") {
-                            $("#contactSuccess").fadeIn(300);
-                            $("#contactError").addClass("hidden");
-
-                            $("#contactForm #name, #contactForm #email, #contactForm #subject, #contactForm #message")
-                                .val("")
-                                .blur()
-                                .closest(".control-group")
-                                .removeClass("success")
-                                .removeClass("error");
-
-                        } else {
-                            $("#contactError").fadeIn(300);
-                            $("#contactSuccess").addClass("hidden");
-                        }
                     }
+                })
+                    .done(function (data) {
+                        $("#contactSuccess").fadeIn(300);
+                        $("#contactError").addClass("hidden");
 
-                });
+                        $("#contactForm #name, #contactForm #email, #contactForm #subject, #contactForm #message")
+                            .val("")
+                            .blur()
+                            .closest(".control-group")
+                            .removeClass("success")
+                            .removeClass("error");
+
+                    })
+                    .fail(function (data) {
+                        $("#contactError").fadeIn(300);
+                        $("#contactSuccess").addClass("hidden");
+                    })
             }
         });
 

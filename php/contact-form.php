@@ -1,16 +1,4 @@
 <?php
-//$name = $_REQUEST['name'];
-//$email = $_REQUEST['email'];
-//$message = $_REQUEST['message'];
-//if (($name == "") || ($email == "") || ($message == "")) {
-//    echo "All fields are required, please fill <a href=\"\">the form</a> again.";
-//} else {
-//    $from = "From: $name<$email>\r\nReturn-path: $email";
-//    $subject = "Message sent using your contact form";
-//    mail("brianhirth404@gmail.com", $subject, $message, $from);
-//    echo "Email sent!";
-//}
-
 // Only process POST reqeusts.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form fields and remove whitespace.
@@ -31,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Set the recipient email address.
     // FIXME: Update this to your desired email address.
     $recipient = "brianhirth404@gmail.com";
-    
+
     // Build the email content.
     $email_content = "Name: $name\n";
     $email_content .= "Email: $email\n\n";
