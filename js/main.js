@@ -52,9 +52,9 @@
 
 
 //==============___Scrollbars___================
-        $('.section-vcardbody').perfectScrollbar({
-            wheelSpeed: 0.9
-        });
+//         $('.section-vcardbody').perfectScrollbar({
+//             wheelSpeed: 0.9
+//         });
 
 //==============___Menu & Pages Animation___================
 
