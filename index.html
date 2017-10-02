@@ -1113,7 +1113,7 @@
 <script type="text/javascript">
     $(function() { $.smartbanner({
         title: 'FrenchFounders', // What the title of the app should be in the banner (defaults to <title>)
-        author: null, // What the author of the app should be in the banner (defaults to <meta name="author"> or hostname)
+        author: 'FrenchFounders, Inc', // What the author of the app should be in the banner (defaults to <meta name="author"> or hostname)
         price: null, // Price of the app
         appStoreLanguage: 'us', // Language code for App Store
         inAppStore: null, // Text of price for iOS
@@ -1136,12 +1136,23 @@
         iOSUniversalApp: true, // If the iOS App is a universal app for both iPad and iPhone, display Smart Banner to iPad users, too.
         appendToSelector: 'body', //Append the banner to a specific selector
         onInstall: function() {
-            // alert('Click install');
+            startMyApp();
         },
         onClose: function() {
             // alert('Click close');
         }
-    }) } )
+    }) } );
+    function startMyApp()
+    {
+        document.location = 'li.wasapp.frenchfounders://events';
+        setTimeout( function()
+        {
+            if( confirm( 'You do not seem to have Your App installed, do you want to go download it now?'))
+            {
+                document.location = 'https://itunes.apple.com/us/app/frenchfounders/id1041061570';
+            }
+        }, 300);
+    }
 </script>
 
 <script>
