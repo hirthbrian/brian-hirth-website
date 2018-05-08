@@ -986,8 +986,11 @@ iframe {
   right: 0px;
   font-weight: 800;
   padding: 3px 10px 2px;
-  color: #888;
+  color: #333;
   font-size: 14px;
+}
+.progress > .progress-completed-white {
+  color: #EEE;
 }
 .skills-list {
   list-style: none;
