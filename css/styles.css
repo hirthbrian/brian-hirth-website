@@ -395,13 +395,13 @@ iframe {
 }
 @media (min-width:992px) {
   .container {
-    min-height: 680px;
+    /* min-height: 680px; */
   }
 }
 .section-vcardbody {
   width: 99%;
   margin: 0 auto;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background: url('../img/bg-card2.png') repeat-x right top #f4f4f4;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -420,18 +420,11 @@ iframe {
 }
 @media (min-width:992px) {
   .section-vcardbody {
-    position: absolute;
     margin-top: 30px;
-    left: 30%;
-    height: 570px;
-    width: 40%;
+    /* height: 570px; */
+    width: 60%;
     padding: 45px;
     padding-bottom: 20px;
-  }
-}
-@media (min-width: 1400px) {
-  .section-vcardbody {
-    margin-top: 180px;
   }
 }
 .section-vcardbody-pgactive {
@@ -446,28 +439,6 @@ iframe {
     visibility: hidden;
     padding: 20px;
     padding-top: 0px;
-  }
-}
-@media (min-width:992px) {
-  .section-page {
-    z-index: 11;
-    opacity: 0;
-  }
-}
-@media (min-width:992px) {
-  .page-mask {
-    position: absolute;
-    top: 605px;
-    left: 30%;
-    display: block;
-    width: 40%;
-    height: 20px;
-    background: #333;
-    z-index: 77;
-    opacity: 0;
-    -webkit-transition: all 0.6s ease-in-out;
-    -moz-transition: all 0.6s ease-in-out;
-    transition: all 0.6s ease-in-out;
   }
 }
 .page-mask-active {
@@ -743,10 +714,10 @@ iframe {
   margin-bottom: 40px;
 }
 .resume-buttons {
-  margin-bottom: 30px;
+  text-align: center;
 }
 .header-page-buttons {
-  margin-top: -20px;
+  margin-top: 20px;
 }
 .page-footer {
   border-top: 1px solid #ccc;
